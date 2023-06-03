@@ -23,7 +23,7 @@ pipeline{
         }
         stage('deploytouat'){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://4.227.254.138:8083')], contextPath: 'uatapp', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://4.227.254.138:8083')], contextPath: 'testapp', war: '**/*.war'
             }
         }
         stage('deploytoprod'){
